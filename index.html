@@ -14,15 +14,15 @@
             --bg-secondary: #0a0a0a;
             --bg-tertiary: #111111;
             --bg-card: #0f0f0f;
-            --accent-primary: #610724;
-            --accent-secondary: #c72659;
+            --accent-primary: #333333;
+            --accent-secondary: #666666;
             --text-primary: #ffffff;
             --text-secondary: #a1a1aa;
             --text-tertiary: #71717a;
             --border-primary: #1f1f23;
             --border-secondary: #27272a;
-            --glow-primary: #c72659;
-            --glow-secondary: #610724;
+            --glow-primary: #444444;
+            --glow-secondary: #222222;
             --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
             --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
             --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -191,7 +191,7 @@
             font-weight: 600;
             border-left: 4px solid var(--accent-secondary);
             padding-left: calc(1.5rem - 4px);
-            box-shadow: 0 0 15px rgba(199, 38, 89, 0.3);
+            box-shadow: 0 0 15px rgba(102, 102, 102, 0.3);
         }
 
         .panel-item.active:hover {
@@ -268,7 +268,7 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #610724, #c72659, #610724, #c72659);
+            background: linear-gradient(135deg, #222222, #444444, #222222, #444444);
             position: absolute;
             top: 0;
             left: 0;
@@ -284,7 +284,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 0 60px rgba(199, 38, 89, 0.5);
+            box-shadow: 0 0 60px rgba(68, 68, 68, 0.5);
             position: absolute;
             top: 50%;
             left: 50%;
@@ -373,7 +373,7 @@
             left: 0;
             right: 0;
             height: 2px;
-            background: linear-gradient(90deg, #610724, #c72659);
+            background: linear-gradient(90deg, #222222, #444444);
             transform: scaleX(0);
             transition: transform 0.4s ease;
         }
@@ -547,11 +547,11 @@
             inset: 0;
             z-index: -2;
             background: repeating-linear-gradient(180deg,
-                    #5d8daa 0%,
-                    #6d98b3 20%,
-                    #7da4bb 50%,
-                    #8eafc4 80%,
-                    #9ebbcc 100%);
+                    #111111 0%,
+                    #1a1a1a 20%,
+                    #222222 50%,
+                    #1a1a1a 80%,
+                    #111111 100%);
             background-size: 100% 300%;
             background-repeat: repeat-y;
             animation: backgroundFlow 12s linear infinite;
@@ -708,11 +708,11 @@
                     font-weight: 900;
                     background: linear-gradient(
                         90deg,
-                        #610724 0%,
-                        #c72659 25%,
-                        #610724 50%,
-                        #c72659 75%,
-                        #610724 100%
+                        #222222 0%,
+                        #444444 25%,
+                        #222222 50%,
+                        #444444 75%,
+                        #222222 100%
                     );
                     background-size: 200% auto;
                     background-clip: text;
@@ -729,6 +729,8 @@
                         <div class="bio-tab">
                             <strong>Place:</strong> Italy
                         </div>
+                        <div class="bio-tab">
+                            <strong>Occupation: </strong> Student 
                         <div class="bio-staff-section">
                             <h3 class="bio-staff-title"><i class="fa-solid fa-user-clock"></i> CURRENTLY</h3>
                             <div class="bio-staff-grid"></div>
@@ -763,11 +765,17 @@
             },
             staffExperience: {
                 discord: [
-                    { serverName: "RBWCM", role: "STAFF TEAM, SCREENSHARER", year: "2025", color: "#FFFFFF", imgurLink: "https://i.imgur.com/KmKc00o.png" },
+                    { serverName: "RBWCM", role: "STAFF TEAM, SCREENSHARER", year: "2025", color: "#FFFFFF", imgurLink: "https://imgur.com/KmKc00o" },
 
                 ],
                 minecraft: [
-                    { serverName: "CoralMC Network", role: "SENIOR MOD, SCREENSHARER, ADMIN SURVIVAL", year: "2023/2024/2025", color: "#51B9B9", imgurLink: "https://imgur.com/a/8KZrRNc" }
+                    { 
+                        serverName: "CoralMC Network", 
+                        role: "SENIOR MOD, SCREENSHARER, ADMIN SURVIVAL,<br>GESTORE MEDIA & YOUTUBER & STREAMER", 
+                        year: "2023/2024/2025", 
+                        color: "#51B9B9", 
+                        imgurLink: "https://imgur.com/a/pDBOv9V",
+                    }
                 ],
 
             },
@@ -927,8 +935,6 @@
         document.addEventListener('DOMContentLoaded', () => {
             initializeProfile();
             const bioStaff = [
-                { serverName: "CoralMC Network", role: "Senior Mod, ScreenSharer, Admin Survival", color: "#4ba4ad", imgurLink: "https://discord.gg/coralmc" },
-                { serverName: "RBWCM", role: "STAFF TEAM, SCREENSHARER", color: "#ffffff", imgurLink: "https://discord.gg/9SCxZRufAb" },
             ];
 
             const bioGrid = document.querySelector('.bio-staff-section .bio-staff-grid');
@@ -982,11 +988,7 @@
             window.addEventListener('scroll', highlightActiveSection);
             highlightActiveSection();
         });
-
-
     </script>
 </body>
 
-
 </html>
-
